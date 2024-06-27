@@ -211,9 +211,9 @@ int VpiArrayObjHdl::initialise(const std::string &name,
 int VpiObjHdl::initialise(const std::string &name, const std::string &fq_name) {
     char *str;
     vpiHandle hdl = GpiObjHdl::get_handle<vpiHandle>();
-    str = vpi_get_str(vpiDefName, hdl);
+    // str = vpi_get_str(vpiDefName, hdl);
     if (str != NULL) m_definition_name = str;
-    str = vpi_get_str(vpiDefFile, hdl);
+    // str = vpi_get_str(vpiDefFile, hdl);
     if (str != NULL) m_definition_file = str;
 
     return GpiObjHdl::initialise(name, fq_name);
